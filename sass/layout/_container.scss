@@ -1,0 +1,5 @@
+@use "../utils/function" as func;
+
+.container {
+    max-width: container(1600, 160, 20);
+}
