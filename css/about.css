@@ -39,15 +39,7 @@ button {
 }
 
 .container {
-<<<<<<< HEAD
-  max-width: 1320px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-=======
   max-width: 1320px !important;
   margin: 0 auto !important;
   padding: 0px 20px;
->>>>>>> 4763ab02c82a1200b16a02129f1bf0569477ef11
 }
