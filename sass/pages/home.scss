@@ -1,12 +1,42 @@
+@use "../utils/variables" as var;
 @import "../global";
+
 nav{
     background-color: var(--bgColor-blue);
     color: white;
     height: 100px;
-    font-family: 'Poppins';
+    .offcanvas-header{
+        background-color: var(--bgColor-blue);
+        button.btn-close{
+            color: white !important;
+        }
+    }
+    button.navbar-toggler{
+        border: none;
+        .navbar-toggler-icon{
+            background-image: url('/images/navtoggle.png') !important;
+            width: 50px;
+            height: 50px;
+        }
+    }
     .offcanvas-body{
+        background-color: var(--bgColor-blue);
         ul{
             li{
+                button{
+                    font-size: var.$fonts16;
+                    font-weight: 500;
+                    width: 185px;
+                    height: 60px;
+                    color: var(--fontColor-white);
+                    border: 2px solid #F4F6FC33;
+                    background-color: transparent;
+                    border-radius: 41px;
+                    -webkit-border-radius: 41px;
+                    -moz-border-radius: 41px;
+                    -ms-border-radius: 41px;
+                    -o-border-radius: 41px;
+                }
                 --bs-nav-link-hover-color: white !important;
                 &:hover{
                     color: var(--fontColor-white) !important;
@@ -20,10 +50,65 @@ nav{
                         color: var(--fontColor-white);
                     }
                 }
+            }
+        }
+    }
+}
+
+.hero{
+    background-color: var(--bgColor-blue);
+    padding-top: 11rem;
+    padding-bottom: 11rem;
+    &__wrapper{
+        &-text{
+            gap: 24px;
+            h1{
+                color: var(--fontColor-white);
+                font-size: var.$fonts54;
+                font-weight: 600;
+                max-width: 582px;
+            }
+            p{
+                font-size: var.$fonts16;
+                font-weight: 500;
+                color: var(--fontColor-white);
+            }
+            &-buttons{
+                gap: 2rem;
                 button{
-                    font-size: 16px;
-                    
+                    background-color: transparent;
+                    color: var(--fontColor-white);
+                    &:first-child{
+                        width: 230px;
+                        height: 64px;
+                        background-color: var(--bgColor-yellow);
+                        border-radius: 41px;
+                        color: black;
+                        -webkit-border-radius: 41px;
+                        -moz-border-radius: 41px;
+                        -ms-border-radius: 41px;
+                        -o-border-radius: 41px;
+                        &:hover{
+                            background-color: rgba(255, 219, 129, 0.809);
+                            transition: .1s linear;
+                            -webkit-transition: .1s linear;
+                            -moz-transition: .1s linear;
+                            -ms-transition: .1s linear;
+                            -o-transition: .1s linear;
+}
+                    }
                 }
+            }
+        }
+        &-photo{
+            width: 50%;
+            position: relative;
+            img{
+                width: 631px;
+                position: absolute;
+                top: -50px;
+                right: 0;
+                object-fit: contain;
             }
         }
     }
