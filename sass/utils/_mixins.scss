@@ -1,0 +1,43 @@
+@use "variables" as var;
+@mixin title($weight, $size, $height) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+    text-transform: uppercase;
+    font-family: 'Poppins';
+  }
+  
+  @mixin title-1 {
+    @include title(600, var.$h1, 74px);
+  }
+  
+  @mixin title-2 {
+    @include title(600, var.$h2, 64px);
+  }
+  
+  @mixin title-3 {
+    @include title(600, var.$h3, 56px);
+  }
+  
+  @mixin title-4 {
+    @include title(500, var.$h4, 56px);
+  }
+  
+  @mixin title-5 {
+    @include title(500, var.$h5, 48px);
+  }
+  
+  @mixin title-6 {
+    @include title(500, var.$h6, 36px);
+  }
+  
+  @mixin card-bg($color){
+    background-color: $color;
+  }
+  
+  @mixin df($jc, $ai, $fd){
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+  }

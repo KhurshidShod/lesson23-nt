@@ -38,5 +38,9 @@ button {
 }
 
 .container {
-  max-width: container(1600, 160, 20);
+  max-width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }

@@ -1,1 +1,21 @@
-@import "../global";
+@use "../global";
+@use "../utils/mixins" as mix;
+.plan__container {
+  @include mix.df(center, center, column);
+  font-family: 'Poppins';
+  background-color: greenyellow;
+  > .plan__container--title {
+    @include mix.title-2;
+    padding-top: 128px;
+    color: var(--fontColor-black);
+  }
+  > .plan__container--desc {
+    max-width: 562px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    opacity: 0.7;
+  }
+}
