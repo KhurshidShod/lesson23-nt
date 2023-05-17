@@ -38,5 +38,32 @@ button {
 }
 
 .container {
-  max-width: container(1600, 160, 20);
+  max-width: 1320px !important;
+  margin: 0 auto !important;
+  padding: 0px 20px;
+}
+
+nav {
+  background-color: var(--bgColor-blue);
+  color: white;
+  height: 100px;
+  font-family: "Poppins";
+}
+nav .offcanvas-body ul li {
+  --bs-nav-link-hover-color: white !important;
+}
+nav .offcanvas-body ul li:hover {
+  color: var(--fontColor-white) !important;
+}
+nav .offcanvas-body ul li a {
+  color: #BBBBCB;
+}
+nav .offcanvas-body ul li a.active {
+  color: var(--fontColor-white) !important;
+}
+nav .offcanvas-body ul li a:hover {
+  color: var(--fontColor-white);
+}
+nav .offcanvas-body ul li button {
+  font-size: 16px;
 }

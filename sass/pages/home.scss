@@ -1,1 +1,30 @@
 @import "../global";
+nav{
+    background-color: var(--bgColor-blue);
+    color: white;
+    height: 100px;
+    font-family: 'Poppins';
+    .offcanvas-body{
+        ul{
+            li{
+                --bs-nav-link-hover-color: white !important;
+                &:hover{
+                    color: var(--fontColor-white) !important;
+                }
+                a{
+                    color: #BBBBCB;
+                    &.active{
+                        color: var(--fontColor-white) !important;
+                    }
+                    &:hover{
+                        color: var(--fontColor-white);
+                    }
+                }
+                button{
+                    font-size: 16px;
+                    
+                }
+            }
+        }
+    }
+}
