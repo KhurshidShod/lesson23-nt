@@ -1,0 +1,56 @@
+@use "../utils/variables" as var;
+
+nav{
+    background-color: var(--bgColor-blue);
+    color: white;
+    height: 100px;
+    z-index: 99999999;
+    .offcanvas-header{
+        background-color: var(--bgColor-blue);
+        button.btn-close{
+            color: white !important;
+        }
+    }
+    button.navbar-toggler{
+        border: none;
+        .navbar-toggler-icon{
+            background-image: url('/images/navtoggle.png') !important;
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .offcanvas-body{
+        background-color: var(--bgColor-blue);
+        ul{
+            li{
+                button{
+                    font-size: var.$fonts16;
+                    font-weight: 500;
+                    width: 185px;
+                    height: 60px;
+                    color: var(--fontColor-white);
+                    border: 2px solid #F4F6FC33;
+                    background-color: transparent;
+                    border-radius: 41px;
+                    -webkit-border-radius: 41px;
+                    -moz-border-radius: 41px;
+                    -ms-border-radius: 41px;
+                    -o-border-radius: 41px;
+                }
+                --bs-nav-link-hover-color: white !important;
+                &:hover{
+                    color: var(--fontColor-white) !important;
+                }
+                a{
+                    color: #BBBBCB;
+                    &.active{
+                        color: var(--fontColor-white) !important;
+                    }
+                    &:hover{
+                        color: var(--fontColor-white);
+                    }
+                }
+            }
+        }
+    }
+}
