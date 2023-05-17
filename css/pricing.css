@@ -44,7 +44,59 @@ button {
   padding: 0px 20px;
 }
 
-<<<<<<< HEAD
+nav {
+  background-color: var(--bgColor-blue);
+  color: white;
+  height: 100px;
+  z-index: 99999999;
+}
+nav .offcanvas-header {
+  background-color: var(--bgColor-blue);
+}
+nav .offcanvas-header button.btn-close {
+  color: white !important;
+}
+nav button.navbar-toggler {
+  border: none;
+}
+nav button.navbar-toggler .navbar-toggler-icon {
+  background-image: url("/images/navtoggle.png") !important;
+  width: 50px;
+  height: 50px;
+}
+nav .offcanvas-body {
+  background-color: var(--bgColor-blue);
+}
+nav .offcanvas-body ul li {
+  --bs-nav-link-hover-color: white !important;
+}
+nav .offcanvas-body ul li button {
+  font-size: 16px;
+  font-weight: 500;
+  width: 185px;
+  height: 60px;
+  color: var(--fontColor-white);
+  border: 2px solid rgba(244, 246, 252, 0.2);
+  background-color: transparent;
+  border-radius: 41px;
+  -webkit-border-radius: 41px;
+  -moz-border-radius: 41px;
+  -ms-border-radius: 41px;
+  -o-border-radius: 41px;
+}
+nav .offcanvas-body ul li:hover {
+  color: var(--fontColor-white) !important;
+}
+nav .offcanvas-body ul li a {
+  color: #BBBBCB;
+}
+nav .offcanvas-body ul li a.active {
+  color: var(--fontColor-white) !important;
+}
+nav .offcanvas-body ul li a:hover {
+  color: var(--fontColor-white);
+}
+
 .plan__container {
   display: flex;
   justify-content: center;
@@ -207,68 +259,4 @@ button {
 .plan__container .plan__container__footer .plan__container__footer--accordion .accordion-custom .accordion-button:not(.collapsed)::after {
   background-image: var(--bs-accordion-btn-active-icon);
   transform: rotate(45deg);
-=======
-nav {
-  background-color: var(--bgColor-blue);
-  color: white;
-  height: 100px;
-  z-index: 99999999;
-}
-
-nav .offcanvas-header {
-  background-color: var(--bgColor-blue);
-}
-
-nav .offcanvas-header button.btn-close {
-  color: white !important;
-}
-
-nav button.navbar-toggler {
-  border: none;
-}
-
-nav button.navbar-toggler .navbar-toggler-icon {
-  background-image: url("/images/navtoggle.png") !important;
-  width: 50px;
-  height: 50px;
-}
-
-nav .offcanvas-body {
-  background-color: var(--bgColor-blue);
-}
-
-nav .offcanvas-body ul li {
-  --bs-nav-link-hover-color: white !important;
-}
-
-nav .offcanvas-body ul li button {
-  font-size: 16px;
-  font-weight: 500;
-  width: 185px;
-  height: 60px;
-  color: var(--fontColor-white);
-  border: 2px solid rgba(244, 246, 252, 0.2);
-  background-color: transparent;
-  border-radius: 41px;
-  -webkit-border-radius: 41px;
-  -moz-border-radius: 41px;
-  -ms-border-radius: 41px;
-  -o-border-radius: 41px;
-}
-
-nav .offcanvas-body ul li:hover {
-  color: var(--fontColor-white) !important;
-}
-
-nav .offcanvas-body ul li a {
-  color: #BBBBCB;
-}
-
-nav .offcanvas-body ul li a.active {
-  color: var(--fontColor-white) !important;
-}
-
-nav .offcanvas-body ul li a:hover {
-  color: var(--fontColor-white);
->>>>>>> 92ba0295e859b2593778bd6d7d918acff96be090
 }
