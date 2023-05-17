@@ -1,65 +1,22 @@
 @use "../utils/variables" as var;
 @import "../global";
 
-nav{
-    background-color: var(--bgColor-blue);
-    color: white;
-    height: 100px;
-    .offcanvas-header{
-        background-color: var(--bgColor-blue);
-        button.btn-close{
-            color: white !important;
-        }
-    }
-    button.navbar-toggler{
-        border: none;
-        .navbar-toggler-icon{
-            background-image: url('/images/navtoggle.png') !important;
-            width: 50px;
-            height: 50px;
-        }
-    }
-    .offcanvas-body{
-        background-color: var(--bgColor-blue);
-        ul{
-            li{
-                button{
-                    font-size: var.$fonts16;
-                    font-weight: 500;
-                    width: 185px;
-                    height: 60px;
-                    color: var(--fontColor-white);
-                    border: 2px solid #F4F6FC33;
-                    background-color: transparent;
-                    border-radius: 41px;
-                    -webkit-border-radius: 41px;
-                    -moz-border-radius: 41px;
-                    -ms-border-radius: 41px;
-                    -o-border-radius: 41px;
-                }
-                --bs-nav-link-hover-color: white !important;
-                &:hover{
-                    color: var(--fontColor-white) !important;
-                }
-                a{
-                    color: #BBBBCB;
-                    &.active{
-                        color: var(--fontColor-white) !important;
-                    }
-                    &:hover{
-                        color: var(--fontColor-white);
-                    }
-                }
-            }
-        }
-    }
-}
-
 .hero{
     background-color: var(--bgColor-blue);
     padding-top: 11rem;
     padding-bottom: 11rem;
+    @media (max-width: 1200px) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
     &__wrapper{
+        display: flex;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 1200px) {
+        gap: 2rem;
+        }
         &-text{
             gap: 24px;
             h1{
@@ -74,20 +31,20 @@ nav{
                 color: var(--fontColor-white);
             }
             &-buttons{
-                gap: 2rem;
+                gap: 5px;
                 button{
                     background-color: transparent;
                     color: var(--fontColor-white);
+                    border-radius: 41px;
+                    -webkit-border-radius: 41px;
+                    -moz-border-radius: 41px;
+                    -ms-border-radius: 41px;
+                    -o-border-radius: 41px;
                     &:first-child{
                         width: 230px;
                         height: 64px;
                         background-color: var(--bgColor-yellow);
-                        border-radius: 41px;
                         color: black;
-                        -webkit-border-radius: 41px;
-                        -moz-border-radius: 41px;
-                        -ms-border-radius: 41px;
-                        -o-border-radius: 41px;
                         &:hover{
                             background-color: rgba(255, 219, 129, 0.809);
                             transition: .1s linear;
@@ -95,20 +52,185 @@ nav{
                             -moz-transition: .1s linear;
                             -ms-transition: .1s linear;
                             -o-transition: .1s linear;
-}
+                        }
+                    }
+                    &:last-child{
+                        width: 230px;
+                        height: 64px;
+                        transition: border .1s linear;
+                        -webkit-transition: border .1s linear;
+                        -moz-transition: border .1s linear;
+                        -ms-transition: border .1s linear;
+                        -o-transition: border .1s linear;
+                        &:hover{
+                            border: 2px solid var(--bgColor-yellow);
+                        }
                     }
                 }
             }
         }
         &-photo{
             width: 50%;
+            height: 400px;
             position: relative;
+            @media (max-width: 1200px) {
+                width: 100%;
+            }
+            @media (max-width: 768px) {
+                height: 300px;
+            }
+            @media (max-width: 550px) {
+                height: 200px;
+            }
             img{
                 width: 631px;
                 position: absolute;
-                top: -50px;
+                top: 0;
                 right: 0;
                 object-fit: contain;
+                @media (max-width: 1200px) {
+                    right: 50%;
+                    transform: translateX(50%);
+                    -webkit-transform: translateX(50%);
+                    -moz-transform: translateX(50%);
+                    -ms-transform: translateX(50%);
+                    -o-transform: translateX(50%);
+                }
+                @media (max-width: 768px) {
+                    width: 500px;
+                    right: 50%;
+                    transform: translateX(50%);
+                    -webkit-transform: translateX(50%);
+                    -moz-transform: translateX(50%);
+                    -ms-transform: translateX(50%);
+                    -o-transform: translateX(50%);
+                }
+                @media (max-width: 550px) {
+                    width: 325px;
+                }
+            }
+        }
+    }
+}
+
+.projects{
+    background-color: #E5E5E5;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    &__wrapper{
+        &-content{
+            display: flex;
+            &-large{
+                width: 75% !important;
+                overflow: hidden;
+                cursor: pointer;
+                position: relative;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+                &-hover{
+                    width: 0%;
+                    height: 100%;
+                    background: linear-gradient(329.39deg, #1C1E53 -10.96%, rgba(28, 30, 83, 0.42) 103.96%);
+                    position: absolute;
+                    overflow: hidden;
+                    transition: all .3s linear;
+                    -webkit-transition: all .3s linear;
+                    -moz-transition: all .3s linear;
+                    -ms-transition: all .3s linear;
+                    -o-transition: all .3s linear;
+                    padding-left: 0;
+                    padding-right: 0;
+                    padding-bottom: 50px;
+                    h1,p{
+                        color: white;
+                        opacity: 0;
+                        transition: opacity 0.1s linear;
+                        -webkit-transition: opacity 0.1s linear;
+                        -moz-transition: opacity 0.1s linear;
+                        -ms-transition: opacity 0.1s linear;
+                        -o-transition: opacity 0.1s linear;
+                        transition-delay: .3s;
+                    }
+                    h1{
+                        font-size: var.$fonts24;
+                        font-weight: 600;
+                        line-height: 36px;
+                    }
+                    p{
+                        font-size: var.$fonts16;
+                        font-weight: 500;
+                    }
+                }
+                &:hover{
+                    .projects__wrapper-content-large-hover{
+                        width: 50%;
+                        padding-left: 48px;
+                        padding-right: 35px;
+                        h1, p {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            &-smalls{
+                width: 40% !important;
+                gap: 3rem;
+                &-small{
+                    width: 95% !important;
+                    cursor: pointer;
+                    position: relative;
+                    height: 50% !important;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    &-hover{
+                        width: 0%;
+                        height: 100%;
+                        background: linear-gradient(329.39deg, #1C1E53 -10.96%, rgba(28, 30, 83, 0.42) 103.96%);
+                        position: absolute;
+                        overflow: hidden;
+                        transition: all .3s linear;
+                        -webkit-transition: all .3s linear;
+                        -moz-transition: all .3s linear;
+                        -ms-transition: all .3s linear;
+                        -o-transition: all .3s linear;
+                        padding-left: 0;
+                        padding-right: 0;
+                        padding-bottom: 50px;
+                        h1,p{
+                            color: white;
+                            opacity: 0;
+                            transition: opacity 0.1s linear;
+                            -webkit-transition: opacity 0.1s linear;
+                            -moz-transition: opacity 0.1s linear;
+                            -ms-transition: opacity 0.1s linear;
+                            -o-transition: opacity 0.1s linear;
+                            transition-delay: .3s;
+                        }
+                        h1{
+                            font-size: var.$fonts24;
+                            font-weight: 600;
+                            line-height: 36px;
+                        }
+                        p{
+                            font-size: var.$fonts16;
+                            font-weight: 500;
+                        }
+                    }
+                    &:hover{
+                        .projects__wrapper-content-smalls-small-hover{
+                            width: 100%;
+                            padding-left: 48px;
+                            padding-right: 35px;
+                            h1, p {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
