@@ -8,27 +8,27 @@
   }
   
   @mixin title-1 {
-    @include title(600, var.$h1, 74px);
+    @include title(600, var.$fonts54, 74px);
   }
   
   @mixin title-2 {
-    @include title(600, var.$h2, 64px);
+    @include title(600, var.$fonts48, 64px);
   }
   
   @mixin title-3 {
-    @include title(600, var.$h3, 56px);
+    @include title(600, var.$fonts38, 56px);
   }
   
   @mixin title-4 {
-    @include title(500, var.$h4, 56px);
+    @include title(500, var.$fonts36, 56px);
   }
   
   @mixin title-5 {
-    @include title(500, var.$h5, 48px);
+    @include title(500, var.$fonts24, 48px);
   }
   
   @mixin title-6 {
-    @include title(500, var.$h6, 36px);
+    @include title(500, var.$fonts18, 36px);
   }
   
   @mixin card-bg($color){

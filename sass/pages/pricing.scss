@@ -1,8 +1,9 @@
 @use "../global";
 @use "../utils/mixins" as mix;
+@use "../utils/variables" as var;
 .plan__container {
   @include mix.df(center, center, column);
-  font-family: 'Poppins';
+  font-family: "Poppins";
   background-color: greenyellow;
   > .plan__container--title {
     @include mix.title-2;
@@ -17,5 +18,78 @@
     font-size: 16px;
     line-height: 28px;
     opacity: 0.7;
+  }
+  .plan__container__box {
+    .plan__container__box--card {
+      @include mix.df(start, start, column);
+      background: #f4f6fc;
+      padding: 64px 76px 62px 48px;
+      .span {
+        @include mix.df(start, center, row);
+        gap: 8px;
+        span:first-child {
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 600;
+          font-size: var.$fonts38;
+          line-height: 56px;
+          color: var(--fontColor-black);
+          a {
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            color: var(--fontColor-blue);
+          }
+        }
+      }
+      h6 {
+        padding-top: 20px;
+        padding-bottom: 8px;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        color: var(--fontColor-black);
+      }
+      p {
+        max-width: 281px;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 28px;
+        color: var(--fontColor-black);
+        opacity: 0.7;
+        padding-bottom: 78px;
+      }
+      ul {
+        @include mix.df(start, start, column);
+        gap: 22px;
+        padding-bottom: 80px;
+        li {
+          margin-left: -35px;
+          list-style-position: inside;
+          list-style-image: url(../images/pricing/play-icon.svg);
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 28px;
+          color: var(--fontColor-black);
+        }
+      }
+      button {
+        padding: 15px 51px;
+        width: 254px;
+        background: var(--fontColor-black);
+        border-radius: 41px;
+        a {
+          color:var(--bgColor-lightblue);
+        }
+      }
+    }
   }
 }
