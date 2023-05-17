@@ -20,9 +20,13 @@
     opacity: 0.7;
   }
   .plan__container__box {
+    padding-top: 64px;
+    @include mix.df(center, center, row);
+    gap: 32px;
     .plan__container__box--card {
       @include mix.df(start, start, column);
       background: #f4f6fc;
+      border-radius: 12px;
       padding: 64px 76px 62px 48px;
       .span {
         @include mix.df(start, center, row);
@@ -63,12 +67,12 @@
         line-height: 28px;
         color: var(--fontColor-black);
         opacity: 0.7;
-        padding-bottom: 78px;
+        padding-bottom: 41px;
       }
       ul {
         @include mix.df(start, start, column);
-        gap: 22px;
-        padding-bottom: 80px;
+        gap: 20px;
+        padding-bottom: 70px;
         li {
           margin-left: -35px;
           list-style-position: inside;
@@ -87,7 +91,57 @@
         background: var(--fontColor-black);
         border-radius: 41px;
         a {
-          color:var(--bgColor-lightblue);
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 32px;
+          color: var(--bgColor-lightblue);
+        }
+      }
+    }
+  }
+
+  .plan__container__footer {
+    width: 100%;
+    padding-top: 128px;
+    padding-bottom: 300px;
+    @include mix.df(space-between, start, row);
+    .plan__container__footer--title {
+      h2 {
+        max-width: 406px;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 64px;
+      }
+      a {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        color: var(--fontColor-blue);
+      }
+    }
+    .plan__container__footer--accordion {
+      width: calc(100% - 450px);
+      .accordion-custom {
+        .accordion-button::after {
+          flex-shrink: 0;
+          width: var(--bs-accordion-btn-icon-width);
+          height: var(--bs-accordion-btn-icon-width);
+          margin-left: auto;
+          content: "";
+          background-image: url(../images/pricing/plus-icon.svg);
+          background-repeat: no-repeat;
+          background-size: var(--bs-accordion-btn-icon-width);
+          transition: var(--bs-accordion-btn-icon-transition);
+        }
+        .accordion-button:not(.collapsed)::after {
+          background-image: var(--bs-accordion-btn-active-icon);
+          transform: rotate(45deg);
         }
       }
     }
