@@ -28,6 +28,7 @@
       background: #f4f6fc;
       border-radius: 12px;
       padding: 64px 76px 62px 48px;
+      transition: 0.5s;
       .span {
         @include mix.df(start, center, row);
         gap: 8px;
@@ -99,6 +100,25 @@
           color: var(--bgColor-lightblue);
         }
       }
+      &:hover {
+        a {
+          color:var(--bgColor-yellow);
+        }
+        h6,
+        p,
+        li{
+          color: #FFFFFF;
+        }
+        span:first-child {
+          color: #fff;
+        }
+        button {
+          background: #FCD980;
+          a {
+            color: var(--fontColor-blackh);
+          }
+        }
+      }
     }
   }
 
@@ -128,6 +148,40 @@
     .plan__container__footer--accordion {
       width: calc(100% - 450px);
       .accordion-custom {
+        h2 {
+          button {
+            background-color: #fff;
+            span:first-child {
+              font-family: "Poppins";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 24px;
+              line-height: 36px;
+              color: var(--fontColor-blue);
+            }
+            span:last-child {
+              margin-left: 33px;
+              font-family: "Poppins";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 24px;
+              line-height: 36px;
+              color: var(--fontColor-black);
+            }
+          }
+        }
+        .accordion-body {
+          margin-left: 56px;
+          padding-top: 16px;
+          padding-bottom: 48px;
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 32px;
+          color: var(--fontColor-black);
+          opacity: 0.87;
+        }
         .accordion-button::after {
           flex-shrink: 0;
           width: var(--bs-accordion-btn-icon-width);
@@ -140,8 +194,8 @@
           transition: var(--bs-accordion-btn-icon-transition);
         }
         .accordion-button:not(.collapsed)::after {
-          background-image: var(--bs-accordion-btn-active-icon);
-          transform: rotate(45deg);
+          background-image: url(../images/pricing/plus-icon.svg);
+          transform: rotate(405deg);
         }
       }
     }

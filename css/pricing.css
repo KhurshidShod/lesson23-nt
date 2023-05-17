@@ -139,6 +139,7 @@ nav .offcanvas-body ul li a:hover {
   background: #f4f6fc;
   border-radius: 12px;
   padding: 64px 76px 62px 48px;
+  transition: 0.5s;
 }
 .plan__container .plan__container__box .plan__container__box--card .span {
   display: flex;
@@ -217,6 +218,23 @@ nav .offcanvas-body ul li a:hover {
   line-height: 32px;
   color: var(--bgColor-lightblue);
 }
+.plan__container .plan__container__box .plan__container__box--card:hover a {
+  color: var(--bgColor-yellow);
+}
+.plan__container .plan__container__box .plan__container__box--card:hover h6,
+.plan__container .plan__container__box .plan__container__box--card:hover p,
+.plan__container .plan__container__box .plan__container__box--card:hover li {
+  color: #FFFFFF;
+}
+.plan__container .plan__container__box .plan__container__box--card:hover span:first-child {
+  color: #fff;
+}
+.plan__container .plan__container__box .plan__container__box--card:hover button {
+  background: #FCD980;
+}
+.plan__container .plan__container__box .plan__container__box--card:hover button a {
+  color: var(--fontColor-blackh);
+}
 .plan__container .plan__container__footer {
   width: 100%;
   padding-top: 128px;
@@ -245,6 +263,38 @@ nav .offcanvas-body ul li a:hover {
 .plan__container .plan__container__footer .plan__container__footer--accordion {
   width: calc(100% - 450px);
 }
+.plan__container .plan__container__footer .plan__container__footer--accordion .accordion-custom h2 button {
+  background-color: #fff;
+}
+.plan__container .plan__container__footer .plan__container__footer--accordion .accordion-custom h2 button span:first-child {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--fontColor-blue);
+}
+.plan__container .plan__container__footer .plan__container__footer--accordion .accordion-custom h2 button span:last-child {
+  margin-left: 33px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--fontColor-black);
+}
+.plan__container .plan__container__footer .plan__container__footer--accordion .accordion-custom .accordion-body {
+  margin-left: 56px;
+  padding-top: 16px;
+  padding-bottom: 48px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--fontColor-black);
+  opacity: 0.87;
+}
 .plan__container .plan__container__footer .plan__container__footer--accordion .accordion-custom .accordion-button::after {
   flex-shrink: 0;
   width: var(--bs-accordion-btn-icon-width);
@@ -257,6 +307,6 @@ nav .offcanvas-body ul li a:hover {
   transition: var(--bs-accordion-btn-icon-transition);
 }
 .plan__container .plan__container__footer .plan__container__footer--accordion .accordion-custom .accordion-button:not(.collapsed)::after {
-  background-image: var(--bs-accordion-btn-active-icon);
-  transform: rotate(45deg);
+  background-image: url(../images/pricing/plus-icon.svg);
+  transform: rotate(405deg);
 }
