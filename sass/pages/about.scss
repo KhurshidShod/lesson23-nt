@@ -64,6 +64,9 @@
             text-align: center;
             flex-direction: column;
             width: 100%;
+            h2 {
+                font-size: var.$fonts24;
+            }
             &-article:first-child {
                 padding-bottom: 30px;
             }
@@ -113,6 +116,14 @@
             background-color: #F4F6FC;
             padding: 60px;
             transition: 0.5s;
+            margin-bottom: 30px;
+            margin-right: 10px;
+            flex-grow: .5;
+            margin-left: 10px;
+            min-width: 200px;
+            img{
+                width: 100% !important;
+            }
             &-h3 {
                 font-size: var.$fonts24;
                 font-weight: 500;
