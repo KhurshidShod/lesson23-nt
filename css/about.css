@@ -44,7 +44,6 @@ button {
   padding: 0px 20px;
 }
 
-<<<<<<< HEAD
 nav {
   background-color: var(--bgColor-blue);
   color: white;
@@ -107,7 +106,8 @@ nav .offcanvas-body ul li a.active {
 
 nav .offcanvas-body ul li a:hover {
   color: var(--fontColor-white);
-=======
+}
+
 .about__header {
   min-height: 100vh;
 }
@@ -250,5 +250,4 @@ nav .offcanvas-body ul li a:hover {
 }
 .about__our-team-row-card:hover h3, .about__our-team-row-card:hover p {
   color: #ffffff;
->>>>>>> 19d2e32c039208504bc1e27a0272b9e2f7732b2f
 }
