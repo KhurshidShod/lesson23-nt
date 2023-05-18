@@ -103,7 +103,6 @@ nav .offcanvas-body ul li a:hover {
   align-items: center;
   flex-direction: column;
   font-family: "Poppins";
-  background-color: greenyellow;
 }
 .plan__container > .plan__container--title {
   font-weight: 600;
@@ -219,6 +218,9 @@ nav .offcanvas-body ul li a:hover {
   line-height: 32px;
   color: var(--bgColor-lightblue);
 }
+.plan__container .plan__container__box .plan__container__box--card:hover {
+  box-shadow: inset 0 -150px 550px 150px var(--fontColor-black);
+}
 .plan__container .plan__container__box .plan__container__box--card:hover a {
   color: var(--bgColor-yellow);
 }
@@ -235,6 +237,16 @@ nav .offcanvas-body ul li a:hover {
 }
 .plan__container .plan__container__box .plan__container__box--card:hover button a {
   color: var(--fontColor-blackh);
+}
+@media (max-width: 450px) {
+  .plan__container .plan__container__box .plan__container__box--card {
+    padding: 64px 46px 62px 28px;
+  }
+}
+@media (max-width: 350px) {
+  .plan__container .plan__container__box .plan__container__box--card {
+    padding: 44px 6px 42px 8px;
+  }
 }
 .plan__container .plan__container__footer {
   width: 100%;
@@ -283,6 +295,11 @@ nav .offcanvas-body ul li a:hover {
   font-size: 24px;
   line-height: 36px;
   color: var(--fontColor-black);
+}
+@media (max-width: 350px) {
+  .plan__container .plan__container__footer .plan__container__footer--accordion .accordion-custom h2 button span:last-child {
+    font-size: 14px;
+  }
 }
 .plan__container .plan__container__footer .plan__container__footer--accordion .accordion-custom .accordion-body {
   margin-left: 56px;
