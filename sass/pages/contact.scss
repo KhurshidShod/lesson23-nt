@@ -1,5 +1,14 @@
-@use "../utils/variables" as var;
-@import "../global";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 1061px;
+  margin: 0 auto;
+  border-radius: 12px;
+  background: #f4f6fc;
+}
 
 #contact {
   padding: 0 10px;
