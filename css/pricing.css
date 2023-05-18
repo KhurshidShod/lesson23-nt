@@ -15,7 +15,7 @@
   --bgColor-blue: #1C1E53;
   --bgColor-lightblue: #F4F6FC;
   --bgColor-yellow: #FCD980;
-  --bgColor-white: #E5E5E5;
+  --bgColor-white: #FFFFFF;
   --bgColor-grey: #F4F5F5;
   --fontColor-black: #282938;
   --fontColor-darkblue: #1D2130;
@@ -49,6 +49,15 @@ nav {
   color: white;
   height: 100px;
   z-index: 99999999;
+  transition: height 0.2s linear;
+  -webkit-transition: height 0.2s linear;
+  -moz-transition: height 0.2s linear;
+  -ms-transition: height 0.2s linear;
+  -o-transition: height 0.2s linear;
+}
+nav.shrink {
+  height: 80px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 nav .offcanvas-header {
   background-color: var(--bgColor-blue);
