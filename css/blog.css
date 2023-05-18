@@ -55,38 +55,30 @@ nav {
   -ms-transition: height 0.2s linear;
   -o-transition: height 0.2s linear;
 }
-
 nav.shrink {
   height: 80px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-
 nav .offcanvas-header {
   background-color: var(--bgColor-blue);
 }
-
 nav .offcanvas-header button.btn-close {
   color: white !important;
 }
-
 nav button.navbar-toggler {
   border: none;
 }
-
 nav button.navbar-toggler .navbar-toggler-icon {
   background-image: url("/images/navtoggle.png") !important;
   width: 50px;
   height: 50px;
 }
-
 nav .offcanvas-body {
   background-color: var(--bgColor-blue);
 }
-
 nav .offcanvas-body ul li {
   --bs-nav-link-hover-color: white !important;
 }
-
 nav .offcanvas-body ul li button {
   font-size: 16px;
   font-weight: 500;
@@ -101,19 +93,158 @@ nav .offcanvas-body ul li button {
   -ms-border-radius: 41px;
   -o-border-radius: 41px;
 }
-
 nav .offcanvas-body ul li:hover {
   color: var(--fontColor-white) !important;
 }
-
 nav .offcanvas-body ul li a {
   color: #BBBBCB;
 }
-
 nav .offcanvas-body ul li a.active {
   color: var(--fontColor-white) !important;
 }
-
 nav .offcanvas-body ul li a:hover {
   color: var(--fontColor-white);
+}
+
+.blog_header {
+  padding-top: 128px;
+  padding-bottom: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.blog_header h2 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 64px;
+  text-transform: uppercase;
+  font-family: "Poppins";
+  max-width: 949px;
+  padding-bottom: 16px;
+}
+.blog_header img {
+  width: 100%;
+}
+.blog_header p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  text-transform: uppercase;
+  font-family: "Poppins";
+}
+.blog_header p span {
+  opacity: 0.87;
+}
+.blog_header .under_img {
+  font-weight: 400px;
+  opacity: 0.7;
+  max-width: 831px;
+  padding-top: 48px;
+  padding-bottom: 16px;
+}
+.blog_header p,
+.blog_header h2 {
+  text-transform: none;
+  text-align: center;
+  color: var(--fontColor-black);
+  width: 100%;
+}
+.blog_header a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  text-transform: uppercase;
+  font-family: "Poppins";
+  text-transform: none;
+  color: var(--fontColor-blue);
+}
+
+.blog_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 64px;
+}
+.blog_main h2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 48px;
+  text-transform: uppercase;
+  font-family: "Poppins";
+  text-transform: none;
+  text-align: center;
+  color: var(--fontColor-black);
+  width: 100%;
+  padding-bottom: 48px;
+}
+.blog_main .blog_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+}
+.blog_main .blog_container .blog_content {
+  padding-bottom: 64px;
+}
+.blog_main .blog_container .blog_content img {
+  width: 100%;
+}
+.blog_main .blog_container .blog_content .date {
+  padding-top: 32px;
+  padding-bottom: 16px;
+}
+.blog_main .blog_container .blog_content h5 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  text-transform: uppercase;
+  font-family: "Poppins";
+  text-transform: none;
+  color: var(--fontColor-black);
+  padding-bottom: 16px;
+}
+.blog_main .blog_container .blog_content .body_text, .blog_main .blog_container .blog_content .date {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  text-transform: uppercase;
+  font-family: "Poppins";
+  text-transform: none;
+  color: var(--fontColor-black);
+  opacity: 0.7;
+}
+.blog_main .blog_container .blog_content .body_text {
+  font-weight: 400px;
+  padding-bottom: 24px;
+}
+.blog_main .blog_container .blog_content a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  text-transform: uppercase;
+  font-family: "Poppins";
+  text-transform: none;
+  color: var(--bgColor-blue);
+}
+
+@media (max-width: 800px) {
+  .blog_header h2 {
+    font-size: 34px;
+  }
+  .blog_main .blog_container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 800px) and (max-width: 550px) {
+  .blog_header h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 800px) {
+  .blog_main .blog_container {
+    grid-template-columns: 1fr;
+  }
 }
