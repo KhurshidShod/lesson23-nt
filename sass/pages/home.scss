@@ -1,4 +1,5 @@
-@use "../utils/variables" as var;
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 @import "../global";
 
 .hero{
@@ -10,7 +11,7 @@
         padding-bottom: 3rem;
     }
     &__wrapper{
-        display: flex;
+        @include df(center, center, row);
         margin: 0;
         justify-content: center;
         align-items: center;
@@ -21,12 +22,12 @@
             gap: 24px;
             h1{
                 color: var(--fontColor-white);
-                font-size: var.$fonts54;
+                font-size:  $fonts54;
                 font-weight: 600;
                 max-width: 582px;
             }
             p{
-                font-size: var.$fonts16;
+                font-size:  $fonts16;
                 font-weight: 500;
                 color: var(--fontColor-white);
             }
@@ -72,7 +73,6 @@
         &-photo{
             width: 50%;
             height: 400px;
-            position: relative;
             @media (max-width: 1200px) {
                 width: 100%;
             }
@@ -82,44 +82,58 @@
             @media (max-width: 550px) {
                 height: 200px;
             }
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             img{
                 width: 631px;
-                position: absolute;
-                top: 0;
-                right: 0;
                 object-fit: contain;
                 @media (max-width: 1200px) {
-                    right: 50%;
-                    transform: translateX(50%);
-                    -webkit-transform: translateX(50%);
-                    -moz-transform: translateX(50%);
-                    -ms-transform: translateX(50%);
-                    -o-transform: translateX(50%);
+                    // right: 50%;
+                    // transform: translateX(50%);
+                    // -webkit-transform: translateX(50%);
+                    // -moz-transform: translateX(50%);
+                    // -ms-transform: translateX(50%);
+                    // -o-transform: translateX(50%);
                 }
                 @media (max-width: 768px) {
                     width: 500px;
-                    right: 50%;
-                    transform: translateX(50%);
-                    -webkit-transform: translateX(50%);
-                    -moz-transform: translateX(50%);
-                    -ms-transform: translateX(50%);
-                    -o-transform: translateX(50%);
-                }
+                    // right: 50%;
+                    // transform: translateX(50%) !important;
+                    // -webkit-transform: translateX(50%) !important;
+                    // -moz-transform: translateX(50%) !important;
+                    // -ms-transform: translateX(50%) !important;
+                    // -o-transform: translateX(50%) !important;
+}
                 @media (max-width: 550px) {
                     width: 325px;
-                }
+                    // right: 50%;
+                    // transform: translateX(50%) !important;
+                    // -webkit-transform: translateX(50%) !important;
+                    // -moz-transform: translateX(50%) !important;
+                    // -ms-transform: translateX(50%) !important;
+                    // -o-transform: translateX(50%) !important;
+}
             }
         }
     }
 }
 
 .projects{
-    background-color: #E5E5E5;
+    background-color: var(--bgColor-white);
     padding-top: 5rem;
     padding-bottom: 5rem;
     &__wrapper{
+        &-text{
+            svg{
+                path{
+                    fill: black !important;
+                }
+            }
+        }
         &-content{
-            display: flex;
+            @include df;
             &-large{
                 width: 75% !important;
                 overflow: hidden;
@@ -148,6 +162,11 @@
                     padding-left: 0;
                     padding-right: 0;
                     padding-bottom: 50px;
+                    svg{
+                        path{
+                            fill: var(--bgColor-yellow);
+                        }
+                    }
                     h1,p{
                         color: white;
                         opacity: 0;
@@ -159,12 +178,12 @@
                         transition-delay: .3s;
                     }
                     h1{
-                        font-size: var.$fonts24;
+                        font-size:  $fonts24;
                         font-weight: 600;
                         line-height: 36px;
                     }
                     p{
-                        font-size: var.$fonts16;
+                        font-size:  $fonts16;
                         font-weight: 500;
                     }
                 }
@@ -216,6 +235,11 @@
                         @media (max-width: 992px) {
                             padding-bottom: 10px;
                         }
+                        svg{
+                            path{
+                                fill: var(--bgColor-yellow);
+                            }
+                        }
                         h1,p{
                             color: white;
                             opacity: 0;
@@ -227,12 +251,12 @@
                             transition-delay: .3s;
                         }
                         h1{
-                            font-size: var.$fonts24;
+                            font-size:  $fonts24;
                             font-weight: 600;
                             line-height: 36px;
                         }
                         p{
-                            font-size: var.$fonts16;
+                            font-size:  $fonts16;
                             font-weight: 500;
                         }
                     }
@@ -257,17 +281,17 @@
     padding-bottom: 5rem;
     &__wrapper{
         p{
-            font-size: var.$fonts16;
+            font-size:  $fonts16;
             font-weight: 500;
             color: var(--fontColor-black);
         }
         h1{
             max-width: 630px;
-            font-size: var.$fonts48;
+            font-size:  $fonts48;
             font-weight: 600;
             line-height: 64px;
             @media (max-width: 768px) {
-                font-size: var.$fonts32;
+                font-size:  $fonts32;
                 font-weight: 700;
                 line-height: 48px;
             }
@@ -278,9 +302,10 @@
                 position: relative;
                 overflow: hidden;
                 z-index: 0;
+                cursor: pointer;
                 i{
                     color: white;
-                    font-size: var.$fonts48;
+                    font-size:  $fonts48;
                 }
                 h4{
                     margin-top: 2rem !important;
@@ -313,6 +338,88 @@
                         -ms-transition: color .3s linear;
                         -o-transition: color .3s linear;
 }
+                }
+            }
+        }
+    }
+}
+.clients{
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: var(--bgColor-lightblue) opacity(5);
+    .clients__wrapper{
+        &-text{
+            @media (max-width: 991px) {
+                width: 100% !important;
+            }
+        }
+        &-carousel{
+            @media (max-width: 991px) {
+                width: 100% !important;
+            }
+            &-text{
+                gap: 2rem !important;
+            }
+            .owl-carousel{
+                position: relative;
+                .owl-nav{
+                    width: 100px;
+                    position: absolute;
+                    right: 0;
+                    bottom: 25px;
+                    .owl-next, .owl-prev{
+                        background-color: var(--bgColor-blue);
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        font-size: $fonts18;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -o-border-radius: 50%;
+                        color: white;
+                    }
+                }
+                .item{
+                    gap: 2rem;
+                    padding: 1rem;
+                    h4{
+                        font-size: $fonts32;
+                        font-weight: 500;
+                        line-height: 48px;
+                        color: var(--fontColor-black);
+                    }
+                    .client{
+                        gap: 1rem;
+                        h5{
+                            font-size: $fonts18;
+                            font-weight: 500;
+                            color: var(--fontColor-black);
+                        }
+                        p{
+                            font-size:  $fonts12;
+                            font-weight: 500;
+                            color: var(--fontColor-black);
+                        }
+                        div{
+                            margin: 0;
+                            padding: 0;
+                            h5, p{
+                                margin: 0;
+                                padding: 0;
+                            }
+                        }
+                        img{
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            -ms-border-radius: 50%;
+                            -o-border-radius: 50%;
+                        }
+                    }
                 }
             }
         }
