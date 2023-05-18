@@ -1,6 +1,9 @@
 @use "../global";
 @use "../utils/mixins" as mix;
 
+a {
+  text-decoration: none;
+}
 .blog_header {
   padding-top: 128px;
   padding-bottom: 128px;
