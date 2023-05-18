@@ -130,6 +130,7 @@ nav .offcanvas-body ul li a:hover {
   align-items: center;
   flex-direction: row;
   gap: 32px;
+  flex-wrap: wrap;
 }
 .plan__container .plan__container__box .plan__container__box--card {
   display: flex;
@@ -224,13 +225,13 @@ nav .offcanvas-body ul li a:hover {
 .plan__container .plan__container__box .plan__container__box--card:hover h6,
 .plan__container .plan__container__box .plan__container__box--card:hover p,
 .plan__container .plan__container__box .plan__container__box--card:hover li {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .plan__container .plan__container__box .plan__container__box--card:hover span:first-child {
   color: #fff;
 }
 .plan__container .plan__container__box .plan__container__box--card:hover button {
-  background: #FCD980;
+  background: #fcd980;
 }
 .plan__container .plan__container__box .plan__container__box--card:hover button a {
   color: var(--fontColor-blackh);
@@ -309,4 +310,13 @@ nav .offcanvas-body ul li a:hover {
 .plan__container .plan__container__footer .plan__container__footer--accordion .accordion-custom .accordion-button:not(.collapsed)::after {
   background-image: url(../images/pricing/plus-icon.svg);
   transform: rotate(405deg);
+}
+@media (max-width: 1000px) {
+  .plan__container .plan__container__footer {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .plan__container .plan__container__footer .plan__container__footer--accordion {
+    min-width: 90%;
+  }
 }

@@ -23,6 +23,7 @@
     padding-top: 64px;
     @include mix.df(center, center, row);
     gap: 32px;
+    flex-wrap: wrap;
     .plan__container__box--card {
       @include mix.df(start, start, column);
       background: #f4f6fc;
@@ -102,18 +103,18 @@
       }
       &:hover {
         a {
-          color:var(--bgColor-yellow);
+          color: var(--bgColor-yellow);
         }
         h6,
         p,
-        li{
-          color: #FFFFFF;
+        li {
+          color: #ffffff;
         }
         span:first-child {
           color: #fff;
         }
         button {
-          background: #FCD980;
+          background: #fcd980;
           a {
             color: var(--fontColor-blackh);
           }
@@ -197,6 +198,13 @@
           background-image: url(../images/pricing/plus-icon.svg);
           transform: rotate(405deg);
         }
+      }
+    }
+    @media (max-width: 1000px) {
+      justify-content: center;
+      flex-wrap: wrap;
+      .plan__container__footer--accordion {
+        min-width: 90%;
       }
     }
   }
