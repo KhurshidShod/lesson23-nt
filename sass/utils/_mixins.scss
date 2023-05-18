@@ -35,7 +35,7 @@
     background-color: $color;
   }
   
-  @mixin df($jc, $ai, $fd){
+  @mixin df($jc: center, $ai: center, $fd: row){
     display: flex;
     justify-content: $jc;
     align-items: $ai;
