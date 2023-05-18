@@ -90,30 +90,12 @@
                 width: 631px;
                 object-fit: contain;
                 @media (max-width: 1200px) {
-                    // right: 50%;
-                    // transform: translateX(50%);
-                    // -webkit-transform: translateX(50%);
-                    // -moz-transform: translateX(50%);
-                    // -ms-transform: translateX(50%);
-                    // -o-transform: translateX(50%);
                 }
                 @media (max-width: 768px) {
                     width: 500px;
-                    // right: 50%;
-                    // transform: translateX(50%) !important;
-                    // -webkit-transform: translateX(50%) !important;
-                    // -moz-transform: translateX(50%) !important;
-                    // -ms-transform: translateX(50%) !important;
-                    // -o-transform: translateX(50%) !important;
 }
                 @media (max-width: 550px) {
                     width: 300px;
-                    // right: 50%;
-                    // transform: translateX(50%) !important;
-                    // -webkit-transform: translateX(50%) !important;
-                    // -moz-transform: translateX(50%) !important;
-                    // -ms-transform: translateX(50%) !important;
-                    // -o-transform: translateX(50%) !important;
 }
             }
         }
