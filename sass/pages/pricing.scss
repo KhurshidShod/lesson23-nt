@@ -26,7 +26,7 @@
     flex-wrap: wrap;
     &--card {
       @include mix.df(start,start,column);
-      background: var(--bgColor-lightblue);
+      background: var(--bgColor-blue);
       border-radius: 12px;
       padding: 64px 76px 62px 48px;
       transition: .1s linear;
