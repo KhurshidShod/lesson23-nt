@@ -411,6 +411,11 @@ nav .offcanvas-body ul li a:hover {
   line-height: 36px;
   color: var(--fontColor-black);
 }
+@media (max-width: 350px) {
+  .plan__container .plan__container__footer .plan__container__footer--accordion .accordion-custom h2 button span:last-child {
+    font-size: 14px;
+  }
+}
 .plan__container .plan__container__footer .plan__container__footer--accordion .accordion-custom .accordion-body {
   margin-left: 56px;
   padding-top: 16px;
