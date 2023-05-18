@@ -14,3 +14,7 @@ window.addEventListener("scroll", () => {
         nav.classList.remove("shrink");
     }
 })
+
+window.addEventListener("load", () => {
+    document.querySelector(".loader").style.display = "none"
+})
