@@ -1,6 +1,9 @@
 @use "../global";
 @use "../utils/mixins" as mix;
 
+a {
+  text-decoration: none;
+}
 .work_header {
   background-color: var(--bgColor-grey);
   .work_header_content {
