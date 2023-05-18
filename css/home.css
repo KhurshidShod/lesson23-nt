@@ -279,7 +279,7 @@ footer .footer__wrapper-left-contact {
 .hero__wrapper-text-buttons {
   gap: 5px;
 }
-.hero__wrapper-text-buttons button {
+.hero__wrapper-text-buttons a button {
   background-color: transparent;
   color: var(--fontColor-white);
   border-radius: 41px;
@@ -288,13 +288,13 @@ footer .footer__wrapper-left-contact {
   -ms-border-radius: 41px;
   -o-border-radius: 41px;
 }
-.hero__wrapper-text-buttons button:first-child {
+.hero__wrapper-text-buttons a:first-child button {
   width: 230px;
   height: 64px;
   background-color: var(--bgColor-yellow);
   color: black;
 }
-.hero__wrapper-text-buttons button:first-child:hover {
+.hero__wrapper-text-buttons a:first-child button:hover {
   background-color: rgba(255, 219, 129, 0.809);
   transition: 0.1s linear;
   -webkit-transition: 0.1s linear;
@@ -302,7 +302,7 @@ footer .footer__wrapper-left-contact {
   -ms-transition: 0.1s linear;
   -o-transition: 0.1s linear;
 }
-.hero__wrapper-text-buttons button:last-child {
+.hero__wrapper-text-buttons a:last-child button {
   width: 230px;
   height: 64px;
   transition: border 0.1s linear;
@@ -311,7 +311,7 @@ footer .footer__wrapper-left-contact {
   -ms-transition: border 0.1s linear;
   -o-transition: border 0.1s linear;
 }
-.hero__wrapper-text-buttons button:last-child:hover {
+.hero__wrapper-text-buttons a:last-child button:hover {
   border: 2px solid var(--bgColor-yellow);
 }
 .hero__wrapper-photo {
